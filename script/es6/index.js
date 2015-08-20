@@ -1,2 +1,3 @@
 // Index.js
-// $('google-signin').signIn()
+let gsi = document.querySelector('google-signin')
+gsi.signIn()

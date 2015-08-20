@@ -1,4 +1,5 @@
-"use strict";
-
 // Index.js
-// $('google-signin').signIn()
+'use strict';
+
+var gsi = document.querySelector('google-signin');
+gsi.signIn();
