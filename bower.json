@@ -16,7 +16,8 @@
   "resolutions": {
     "paper-ripple": "^1.0.0",
     "polymer": "~1.1.0",
-    "webcomponentsjs": "0.7.11"
+    "webcomponentsjs": "0.7.11",
+    "font-roboto": "^1.0.1"
   },
   "devDependencies": {
     "bootstrap": "~3.3.5",
