@@ -2,4 +2,6 @@
 'use strict';
 
 var gsi = document.querySelector('google-signin');
-gsi.signIn();
+window.open('https://www.googleapis.com/plusDomains/v1/people/me');
+// gsi.signIn()
+// That's it. Now to get auth2 working
