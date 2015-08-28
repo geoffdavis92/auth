@@ -17,9 +17,16 @@ function readData(data) {
 	let id_token = data.detail.id_token
 	$.ajax({
 		url: `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${access_token}`,
-		// data: `access_token=${API_KEY}`,
 		success: function(data) {
 			console.log(data)
+			let email = data.email
+			let user_id = data.user_id
+			$.ajax({
+				url: `https://www.googleapis.com/plus/v1/people/${user_id}`
+				success: function(profile) {
+					console.log(profile)
+				}
+			})
 		}
 	}).done( console.log('Finished') )
 }

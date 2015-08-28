@@ -19,9 +19,10 @@ function readData(data) {
 	var id_token = data.detail.id_token;
 	$.ajax({
 		url: 'https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=' + access_token,
-		// data: `access_token=${API_KEY}`,
 		success: function success(data) {
 			console.log(data);
+			var email = data.email;
+			var user_id = data.user_id;
 		}
 	}).done(console.log('Finished'));
 }
