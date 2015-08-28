@@ -24,6 +24,7 @@ function readData(data) {
 			$.ajax({
 				url: `https://www.googleapis.com/plus/v1/people/${user_id}`
 				success: function(profile) {
+					console.log('Getting profile')
 					console.log(profile)
 				}
 			})
