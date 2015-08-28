@@ -22,7 +22,7 @@ function readData(data) {
 			let email = data.email
 			let user_id = data.user_id
 			$.ajax({
-				url: `https://www.googleapis.com/plus/v1/people/${user_id}`,
+				url: `https://plus.google.com/${user_id}`
 				success: function(profile) {
 					console.log('Getting profile')
 					console.log(profile)
