@@ -15,7 +15,12 @@ gsi.addEventListener('google-signin-aware-success', function (data) {
 
 function readData(data) {
 	console.log(data);
-	var access_token = data.detail.access_token;
+	var access_token = data.detail.access_token
+	// $.ajax({
+	// 	url: `https://www.googleapis.com/plus/v1/people/${`
+	// 	data: `access_token=${access_token}`
+	// })
+	;
 }
 
 function getData() {
