@@ -17,7 +17,7 @@ function readData(data) {
 	let id_token = data.detail.id_token
 	$.ajax({
 		url: `https://www.googleapis.com/plus/v1/people/${id_token}`,
-		data: `access_token=${CLIENT_ID}`,
+		data: `access_token=${API_KEY}`,
 		success: function(data) {
 			console.log(data)
 		}

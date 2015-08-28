@@ -19,7 +19,7 @@ function readData(data) {
 	var id_token = data.detail.id_token;
 	$.ajax({
 		url: 'https://www.googleapis.com/plus/v1/people/' + id_token,
-		data: 'access_token=' + CLIENT_ID,
+		data: 'access_token=' + API_KEY,
 		success: function success(data) {
 			console.log(data);
 		}
