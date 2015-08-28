@@ -8,10 +8,11 @@ const API_KEY = "AIzaSyDsZhCsjTtHrLuLRPQKYfs7AaS3js8TIyw"
 const CLIENT_ID = "844275130627-7o60j8u9qoe3rj50m5sib5m7ik8rig9q.apps.googleusercontent.com"
 
 gsi.addEventListener('google-signin-aware-success', function(data) {
-readData(data)
+	readData(data)
 })
 
 function readData(data) {
+	console.log(data)
 	let access_token = data.detail.access_token
 }
 

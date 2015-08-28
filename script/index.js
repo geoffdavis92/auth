@@ -14,6 +14,7 @@ gsi.addEventListener('google-signin-aware-success', function (data) {
 });
 
 function readData(data) {
+	console.log(data);
 	var access_token = data.detail.access_token;
 }
 
