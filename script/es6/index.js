@@ -14,10 +14,15 @@ gsi.addEventListener('google-signin-aware-success', function(data) {
 function readData(data) {
 	console.log(data)
 	let access_token = data.detail.access_token
-	// $.ajax({
-	// 	url: `https://www.googleapis.com/plus/v1/people/${`
-	// 	data: `access_token=${access_token}`
-	// })
+	let id_token = data.detail.id_token
+	let token = id_token
+	$.ajax({
+		url: `https://www.googleapis.com/plus/v1/people/${token}`,
+		data: `access_token=${token}`,
+		success: function(data) {
+			console.log(data)
+		}
+	}).done( console.log('Finished') )
 }
 
 function getData () {

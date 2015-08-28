@@ -15,12 +15,16 @@ gsi.addEventListener('google-signin-aware-success', function (data) {
 
 function readData(data) {
 	console.log(data);
-	var access_token = data.detail.access_token
-	// $.ajax({
-	// 	url: `https://www.googleapis.com/plus/v1/people/${`
-	// 	data: `access_token=${access_token}`
-	// })
-	;
+	var access_token = data.detail.access_token;
+	var id_token = data.detail.id_token;
+	var token = id_token;
+	$.ajax({
+		url: 'https://www.googleapis.com/plus/v1/people/' + token,
+		data: 'access_token=' + token,
+		success: function success(data) {
+			console.log(data);
+		}
+	}).done(console.log('Finished'));
 }
 
 function getData() {
