@@ -8,16 +8,23 @@
     	text-align: center;
     }
     img {
-    	margin: 2.5% auto;
+    	margin: 0 auto;
     	text-align: center;
     	-webkit-filter: grayscale(100%);
     	-o-filter: grayscale(100%);
     	filter: grayscale(100%);
+    	-webkit-transition: .2s filter;
+    	-o-transition: .2s filter;
+    	transition: .2s filter;
+    	width: 15%;
     }
     img:hover {
     	-webkit-filter: grayscale(0%);
     	-o-filter: grayscale(0%);
     	filter: grayscale(0%);
+    	-webkit-transition: .2s filter;
+    	-o-transition: .2s filter;
+    	transition: .2s filter;
     }
     </style>
     {{ content }}
