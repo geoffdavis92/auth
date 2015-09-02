@@ -21,6 +21,9 @@ if (window.location.href === 'http://geoffdavis92.github.io/auth/unauthorized.ht
     gsi.addEventListener('google-signin-aware-success', function(data) {
         readData(data)
     })
+    gsi.addEventListener('google-signed-out', function () {
+    	window.open('http://geoffdavis92.github.io/auth/landing.html','_self')
+    })
 
     function readData(data) {
         console.log(data)

@@ -26,6 +26,13 @@
     	-o-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
     	transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
     }
+    img:focus {
+    	cursor: pointer;
+    	-webkit-filter: grayscale(50%);
+    	-o-filter: grayscale(50%);
+    	filter: grayscale(50%);
+    	outline: none;
+    }
     </style>
     {{ content }}
 </body>
