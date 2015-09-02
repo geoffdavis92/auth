@@ -27,17 +27,7 @@ function readData(data) {
 		success: function success(data) {
 			console.log(data);
 			var email = data.email;
-
 			testEmail(email);
-
-			var user_id = data.user_id;
-			// $.ajax({
-			// 	url: `https://www.googleapis.com/plus/v1/people/${user_id}`,
-			// 	success: function(profile) {
-			// 		console.log('Getting profile')
-			// 		console.log(profile)
-			// 	}
-			// })
 		}
 	}).done(console.log('Finished'));
 }
