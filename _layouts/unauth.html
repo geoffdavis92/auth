@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    <style>
+    div.unauth {
+    	margin: 10% auto;
+    	text-align: center;
+    }
+    img {
+    	margin: 0 auto;
+    	text-align: center;
+    	-webkit-filter: grayscale(100%);
+    	-o-filter: grayscale(100%);
+    	filter: grayscale(100%);
+    	-webkit-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
+    	-o-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
+    	transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
+    	width: 15%;
+    }
+    img:hover {
+    	-webkit-filter: grayscale(0%);
+    	-o-filter: grayscale(0%);
+    	filter: grayscale(0%);
+    	-webkit-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
+    	-o-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
+    	transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
+    }
+    img:focus {
+    	cursor: pointer;
+    	-webkit-filter: grayscale(50%);
+    	-o-filter: grayscale(50%);
+    	filter: grayscale(50%);
+    	outline: none;
+    }
+    </style>
+    {{ content }}
+</body>
+
+</html>
