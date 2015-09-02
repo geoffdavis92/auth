@@ -45,18 +45,14 @@ function getData () {
 function testEmail(email) {
 	let url = window.href
 	let domain = (a) => {
-		console.log(a)
-		a.split('@')
-		console.log(a)
-		a[1].split('.')
-		console.log(a)
-		if (a[1][0] === 'archermalmo') {
+		a = a.split('@')
+		a = a[1].split('.')
+		if (a[0] === 'archermalmo') {
 			return true
 		} else {
 			return false
 		}
 	}
-	console.log(domain(email))
 	if (domain(email)) {
 		body.style.display = 'initial'
 	} else {
