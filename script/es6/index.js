@@ -21,13 +21,13 @@ function readData(data) {
 			console.log(data)
 			let email = data.email
 			let user_id = data.user_id
-			$.ajax({
-				url: `https://www.googleapis.com/plus/v1/people/${user_id}`,
-				success: function(profile) {
-					console.log('Getting profile')
-					console.log(profile)
-				}
-			})
+			// $.ajax({
+			// 	url: `https://www.googleapis.com/plus/v1/people/${user_id}`,
+			// 	success: function(profile) {
+			// 		console.log('Getting profile')
+			// 		console.log(profile)
+			// 	}
+			// })
 		}
 	}).done( console.log('Finished') )
 }
