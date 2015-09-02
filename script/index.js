@@ -27,6 +27,7 @@ function readData(data) {
 		success: function success(data) {
 			console.log(data);
 			var email = data.email;
+			console.log(email);
 			testEmail(email);
 		}
 	}).done(console.log('Finished'));
@@ -46,6 +47,7 @@ function getData() {
 function testEmail(email) {
 	var url = window.href;
 	var domain = function domain(a) {
+		console.log(a);
 		a.split('@');
 		a[1].split('.');
 		if (a[1][0] === 'archermalmo') {
@@ -54,6 +56,7 @@ function testEmail(email) {
 			return false;
 		}
 	};
+	console.log(domain(email));
 	if (domain(email)) {
 		body.style.display = 'initial';
 	} else {

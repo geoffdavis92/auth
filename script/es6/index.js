@@ -25,6 +25,7 @@ function readData(data) {
 		success: function(data) {
 			console.log(data)
 			let email = data.email
+			console.log(email)
 			testEmail(email)
 		}
 	}).done( console.log('Finished') )
@@ -44,6 +45,7 @@ function getData () {
 function testEmail(email) {
 	let url = window.href
 	let domain = (a) => {
+		console.log(a)
 		a.split('@')
 		a[1].split('.')
 		if (a[1][0] === 'archermalmo') {
@@ -52,6 +54,7 @@ function testEmail(email) {
 			return false
 		}
 	}
+	console.log(domain(email))
 	if (domain(email)) {
 		body.style.display = 'initial'
 	} else {
