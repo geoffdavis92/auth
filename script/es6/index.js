@@ -1,9 +1,14 @@
 // Index.js
+const body = document.querySelector('body')
 let gsi = document.querySelector('google-signin')
 let gsia = document.querySelector('google-signin-aware')
+
+body.style.display = "none"
+
 gsi.click(function(e) {
 	gsi.signIn()
 });
+
 const API_KEY = "AIzaSyDsZhCsjTtHrLuLRPQKYfs7AaS3js8TIyw"
 const CLIENT_ID = "844275130627-7o60j8u9qoe3rj50m5sib5m7ik8rig9q.apps.googleusercontent.com"
 
@@ -20,6 +25,9 @@ function readData(data) {
 		success: function(data) {
 			console.log(data)
 			let email = data.email
+
+			testEmail(email)
+
 			let user_id = data.user_id
 			// $.ajax({
 			// 	url: `https://www.googleapis.com/plus/v1/people/${user_id}`,
@@ -41,4 +49,22 @@ function getData () {
 	}).done(function(data) {
 		console.log(data)
 	})
+}
+
+function testEmail(email) {
+	let url = window.href
+	let domain = (a) => {
+		a.split('@')
+		a[1].split('.')
+		if (a[1][0] === 'archermalmo') {
+			return true
+		} else {
+			return false
+		}
+	}
+	if (domain(email)) {
+		body.style.display = 'initial'
+	} else {
+		window.open('unauthorized.html', '_self')
+	}
 }
