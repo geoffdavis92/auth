@@ -6,8 +6,8 @@ var gsia = document.querySelector('google-signin-aware');
 gsi.click(function (e) {
 	gsi.signIn();
 });
-var API_KEY = 'AIzaSyDsZhCsjTtHrLuLRPQKYfs7AaS3js8TIyw';
-var CLIENT_ID = '844275130627-7o60j8u9qoe3rj50m5sib5m7ik8rig9q.apps.googleusercontent.com';
+var API_KEY = "AIzaSyDsZhCsjTtHrLuLRPQKYfs7AaS3js8TIyw";
+var CLIENT_ID = "844275130627-7o60j8u9qoe3rj50m5sib5m7ik8rig9q.apps.googleusercontent.com";
 
 gsi.addEventListener('google-signin-aware-success', function (data) {
 	readData(data);
@@ -23,13 +23,13 @@ function readData(data) {
 			console.log(data);
 			var email = data.email;
 			var user_id = data.user_id;
-			$.ajax({
-				url: 'https://www.googleapis.com/plus/v1/people/' + user_id,
-				success: function success(profile) {
-					console.log('Getting profile');
-					console.log(profile);
-				}
-			});
+			// $.ajax({
+			// 	url: `https://www.googleapis.com/plus/v1/people/${user_id}`,
+			// 	success: function(profile) {
+			// 		console.log('Getting profile')
+			// 		console.log(profile)
+			// 	}
+			// })
 		}
 	}).done(console.log('Finished'));
 }
