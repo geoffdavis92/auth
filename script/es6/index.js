@@ -47,7 +47,9 @@ function testEmail(email) {
 	let domain = (a) => {
 		console.log(a)
 		a.split('@')
+		console.log(a)
 		a[1].split('.')
+		console.log(a)
 		if (a[1][0] === 'archermalmo') {
 			return true
 		} else {
