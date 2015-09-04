@@ -1,4 +1,4 @@
-// Index.js
+// Index.js | AUTH
 'use strict';
 
 if (window.location.href === 'http://geoffdavis92.github.io/auth/unauthorized.html') {

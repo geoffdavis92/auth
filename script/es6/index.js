@@ -1,4 +1,4 @@
-// Index.js
+// Index.js | AUTH
 if (window.location.href === 'http://geoffdavis92.github.io/auth/unauthorized.html') {
     // Close out after 10 seconds
     let timeout = setTimeout(function() {
