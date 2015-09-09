@@ -3,35 +3,74 @@
 {% include head.html %}
 <body>
     <style>
-    div.unauth {
+    div.home, div.unauth {
     	margin: 10% auto;
     	text-align: center;
     }
-    img {
+    div.home h1.page-heading {
+        font-size: 2em;
+    }
+    div.home nav {
+        margin: 0 auto 20px;
+    }
+    div.home nav paper-button .content.paper-button{
+        color: #333;
+        padding: 8px 12px;
+    }
+    div.home nav a{
+        color: #333;
+    }
+    .home img {
     	margin: 0 auto;
     	text-align: center;
-    	-webkit-filter: grayscale(100%);
+    	/*-webkit-filter: grayscale(100%);
     	-o-filter: grayscale(100%);
-    	filter: grayscale(100%);
-    	-webkit-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
-    	-o-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
-    	transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
-    	width: 15%;
+    	filter: grayscale(100%);*/
+    	-webkit-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+    	-o-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+    	transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+    	/*width: 15%;*/
     }
-    img:hover {
+    .home button.logo:hover img {
     	-webkit-filter: grayscale(0%);
     	-o-filter: grayscale(0%);
     	filter: grayscale(0%);
-    	-webkit-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
-    	-o-transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
-    	transition: .2s filter, .2s -webkit-filter, .2s -o-filter;
+    	-webkit-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+    	-o-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+    	transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
     }
-    img:focus {
+    .home button.logo:focus img {
     	cursor: pointer;
     	-webkit-filter: grayscale(50%);
     	-o-filter: grayscale(50%);
     	filter: grayscale(50%);
     	outline: none;
+    }
+    .unauth img {
+        margin: 0 auto;
+        text-align: center;
+        -webkit-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+        -o-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+        transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+        /*width: 15%;*/
+    }
+    .unauth img:hover {
+        -webkit-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+        filter: grayscale(0%);
+        -webkit-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+        -o-transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+        transition: .15s filter, .15s -webkit-filter, .15s -o-filter;
+    }
+    .unauth img:focus {
+        cursor: pointer;
+        -webkit-filter: grayscale(50%);
+        -o-filter: grayscale(50%);
+        filter: grayscale(50%);
+        outline: none;
     }
     </style>
     {{ content }}

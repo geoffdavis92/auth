@@ -1,12 +1,23 @@
 ---
-layout: unauth
-title: Authentication Home
+layout: clean
+title: AM Directory
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Authentication Test</h1>
-
+    <h1 class="page-heading">{{ page.title }}</h1>
+    <nav>
+    	<a href="app.html">
+    		<paper-button raised>Application</paper-button>
+    	</a>
+    	<a href="http://archermalmo.com">
+    		<paper-button class="logo" style="width: 150px;" raised>
+    			<img src="images/amlogo.svg" alt="Archer Malmo" width="100%">
+    		</paper-button>
+    	</a>
+    </nav>
+    <!-- <aside class="logo">
+    	<a href="http://archermalmo.com">
+    		<img src="images/amlogo.svg" alt="Archer Malmo" width="25%">
+    	</a>
+    </aside> -->
 </div>
-
-<script src="script/index.js"></script>
